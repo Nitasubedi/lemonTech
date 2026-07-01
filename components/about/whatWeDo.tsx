@@ -29,11 +29,11 @@ export default function WhatWeDo() {
   return (
     <section className="bg-[#0d0d1f] py-28">
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-center uppercase tracking-widest text-yellow-400 font-semibold text-sm">
+        <p className="text-center uppercase tracking-widest text-yellow-400 font-semibold text-sm ">
           What We Do
         </p>
 
-        <h2 className="text-center text-white text-6xl font-bold mt-5">
+        <h2 className="text-center text-white font-bold mt-5 text-4xl sm:text-5xl md:text-6xl">
           Real Results,
           <span className="text-yellow-400"> Real Voices</span>
         </h2>

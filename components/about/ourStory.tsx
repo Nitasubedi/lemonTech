@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function OurStory() {
   return (
-    <section className="bg-[#111127] py-28">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-          <div>
-            <p className="text-yellow-400 uppercase tracking-wider font-semibold">
+    <section className="bg-[#111127] py-28 lg:pt-28">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+        <div className="grid lg:grid-cols-2  gap-20 items-center ">
+          <div className="text-4xl sm:text-5xl md:text-6xl lg:flex-row">
+            <p className="text-yellow-400 uppercase tracking-wider font-semibold sm:text-lg ">
               Our Story
             </p>
-            <h2 className="text-white text-6xl font-bold leading-tight mt-5">
+            <h2 className="text-white  font-bold leading-tight mt-5 text-4xl sm:text-5xl md:text-6xl">
               From Frustration
               <span className="text-yellow-400"> to Foundation</span>
             </h2>

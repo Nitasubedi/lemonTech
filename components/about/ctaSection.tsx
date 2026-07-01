@@ -10,7 +10,7 @@ export default function CTASection() {
         </p>
 
         {/* Heading */}
-        <h2 className="text-white text-5xl lg:text-7xl font-bold leading-tight mt-6">
+        <h2 className="text-white lg:text-7xl font-bold leading-tight mt-6 text-4xl sm:text-5xl md:text-6xl">
           Enough Reading.
           <br />
           Lets <span className="text-yellow-400">Talk Results.</span>

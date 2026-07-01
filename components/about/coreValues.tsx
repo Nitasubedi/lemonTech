@@ -32,13 +32,13 @@ export default function CoreValues() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Small Heading */}
 
-        <p className="text-center uppercase tracking-widest text-yellow-400 font-semibold text-sm">
+        <p className="text-center uppercase tracking-widest text-yellow-400 font-semibold text-sm ">
           WHAT WE DO
         </p>
 
         {/* Main Heading */}
 
-        <h2 className="text-center text-5xl lg:text-6xl font-bold text-white mt-5">
+        <h2 className="text-center text-4xl sm:text-5xl md:text-6xl font-bold text-white mt-5">
           Core
           <span className="text-yellow-400"> Values</span>
         </h2>
