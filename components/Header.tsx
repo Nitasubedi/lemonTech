@@ -1,9 +1,14 @@
-import React from "react";
+"use client"
+
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/assets/lemonTech-header-logo.png";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null); // Ref to capture the header container
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -12,8 +17,30 @@ const Header = () => {
     { name: "Contact", href: "#contact" },
   ];
 
+  // Handle clicking outside of the header component
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    // Only bind the event listener if the menu is open
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    // Clean up the event listener
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-(--text-gray) bg-background backdrop-blur-md">
+    <header 
+      ref={headerRef} // Attached the ref here
+      className="sticky top-0 z-50 w-full border-b border-(--text-gray) bg-background backdrop-blur-md"
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
@@ -52,24 +79,70 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           className="rounded-lg border p-2 md:hidden"
-          aria-label="Open Menu"
+          aria-label={isOpen ? "Close Menu" : "Open Menu"}
+          onClick={() => setIsOpen(!isOpen)}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          {isOpen ? (
+            /* Close/X Icon */
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            /* Hamburger Icon */
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          )}
         </button>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="border-t border-(--text-gray) bg-background px-6 py-4 md:hidden">
+          <nav className="flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-md font-bold text-foreground transition-colors duration-300 hover:text-(--lemon-yellow)"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Link
+              href="#contact"
+              className="group inline-flex items-center justify-center gap-2 rounded-md bg-(--lemon-yellow) px-6 py-3 text-sm font-semibold text-black transition-all duration-300 hover:bg-(--lemon-yellow)/90"
+              onClick={() => setIsOpen(false)}
+            >
+              Get Started
+              <span>→</span>
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
