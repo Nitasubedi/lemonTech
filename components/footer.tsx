@@ -41,7 +41,7 @@ export default function Footer() {
               height={70}
             />
 
-            <p className="text-gray-400 mt-7 text-[17px] leading-8">
+            <p className="text-gray-400 mt-7 text-[16px] leading-8 ">
               A digital marketing agency that helps businesses formalize their
               brand, dominate their niche, and acquire clients with data-driven
               precision.
@@ -92,7 +92,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-400 hover:text-yellow-400 transition text-lg"
+                    className="text-gray-400 hover:text-yellow-400 transition text-sm"
                   >
                     {item.name}
                   </Link>
@@ -110,7 +110,7 @@ export default function Footer() {
 
             <ul className="space-y-4">
               {services.map((service) => (
-                <li key={service} className="text-gray-400 text-lg">
+                <li key={service} className="text-gray-400 text-sm">
                   {service}
                 </li>
               ))}
@@ -122,7 +122,7 @@ export default function Footer() {
           <div>
             <h3 className="text-yellow-400 text-3xl font-bold mb-8">CONTACT</h3>
 
-            <ul className="space-y-4 text-gray-400 text-lg">
+            <ul className="space-y-4 text-gray-400 text-sm">
               <li>Thamel, Kathmandu, Nepal</li>
 
               <li>hello@lemontech.agency</li>
@@ -138,11 +138,11 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-5">
-            <p className="text-gray-400 text-base">
+            <p className="text-gray-400 text-sm">
               © 2025 LemonTech. All rights reserved.
             </p>
 
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-wrap gap-6 text-sm">
               <Link
                 href="/careers"
                 className="text-gray-400 hover:text-yellow-400 transition"
