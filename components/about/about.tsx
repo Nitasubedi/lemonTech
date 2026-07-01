@@ -4,7 +4,7 @@ export default function AboutHero() {
       <div className="max-w-7xl mx-auto w-full px-6">
         <div className="flex justify-between items-center">
           {/* Left Content */}
-          <div className="w-1/2">
+          <div className="w-2/3">
             {/* Badge */}
             <span className="inline-block border border-yellow-500 rounded-full px-5 py-2 text-green-500 font-semibold">
               • ABOUT LEMONTECH
@@ -26,9 +26,6 @@ export default function AboutHero() {
               strong as its product.
             </p>
           </div>
-
-          {/* Right Side */}
-          <div className="w-1/2">{/* Image goes here later */}</div>
         </div>
       </div>
     </section>

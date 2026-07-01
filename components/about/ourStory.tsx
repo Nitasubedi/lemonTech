@@ -11,9 +11,7 @@ export default function OurStory() {
             </p>
             <h2 className="text-white text-6xl font-bold leading-tight mt-5">
               From Frustration
-              <span className="text-yellow-400"> to</span>
-              <br />
-              <span className="text-yellow-400">Foundation</span>
+              <span className="text-yellow-400"> to Foundation</span>
             </h2>
             <div className="space-y-3 mt-8 text-gray-300 leading-8 text-lg">
               <p>
