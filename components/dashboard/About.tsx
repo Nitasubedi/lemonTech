@@ -36,7 +36,7 @@ const About = () => {
             <div className='container max-w-6xl mx-auto flex flex-col gap-12 px-6 py-10 md:py-16 lg:py-20'>
                 {/* Header Content Group */}
                 <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
-                    <p className="inline-flex items-center gap-2 mb-4 px-4 py-2  text-xs font-bold uppercase tracking-widest text-(--lemon-yellow)">
+                    <p className="inline-flex items-center gap-2 mb-4 px-4 py-2  text-md font-bold uppercase tracking-widest text-(--lemon-yellow)">
                         {/* <span className="w-2 h-2 rounded-full bg-(--lemon-yellow)"></span> */}
                         Why LemonTech
                     </p>
