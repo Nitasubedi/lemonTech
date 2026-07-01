@@ -6,7 +6,7 @@ import Logo from "@/assets/lemonTech-header-logo.png";
 const Header = () => {
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "#about" },
+    { name: "About", href: "/about" },
     { name: "Services", href: "#services" },
     { name: "Portfolio", href: "#portfolio" },
     { name: "Contact", href: "#contact" },
@@ -17,13 +17,7 @@ const Header = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <Image
-            src={Logo}
-            alt="Logo"
-            width={200}
-            height={80}
-            priority
-          />
+          <Image src={Logo} alt="Logo" width={200} height={80} priority />
           {/* <span className="text-xl font-bold text-gray-900">
             YourCompany
           </span> */}
