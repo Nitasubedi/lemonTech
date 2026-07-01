@@ -13,7 +13,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-background backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-(--text-gray) bg-background backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
@@ -46,7 +46,7 @@ const Header = () => {
         <div className="hidden md:block">
           <Link
             href="#contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-(--lemon-yellow) px-6 py-3 text-sm font-semibold text-black transition-all duration-300 hover:bg-(--lemon-yellow)/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-(--lemon-yellow) focus:ring-offset-2"
+            className="group inline-flex items-center gap-2 rounded-md bg-(--lemon-yellow) px-6 py-3 text-sm font-semibold text-black transition-all duration-300 hover:bg-(--lemon-yellow)/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-(--lemon-yellow) focus:ring-offset-2"
           >
             Get Started
             <span className="transition-transform duration-300 group-hover:translate-x-1">

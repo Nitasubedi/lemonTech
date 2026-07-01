@@ -3,6 +3,8 @@
 :root {
   --background: #0E0E1A;
   --foreground: #ffffff;
+  --background-secondary: #16162A;
+  --background-card: #1E1E35;
   --text-gray:#ACACB6 ;
   --text-white: #F0F0F0;
   --text-black: #000000;
